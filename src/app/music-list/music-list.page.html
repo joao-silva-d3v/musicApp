@@ -7,12 +7,28 @@
 </ion-header>
 
 <ion-content>
-  <ion-list>
-    <ion-item *ngFor="let music of musics" [routerLink]="['/music-detail', music.id]">
-      <ion-label>
-        <h2>{{ music.title }}</h2>
-        <p>{{ music.artist }} - {{ music.album }}</p>
-      </ion-label>
-    </ion-item>
-  </ion-list>
+  <!-- Segment Control -->
+  <ion-segment value="all">
+    <ion-segment-button value="all">
+      All
+    </ion-segment-button>
+    <ion-segment-button value="pop">
+      Pop
+    </ion-segment-button>
+    <ion-segment-button value="rock">
+      Rock
+    </ion-segment-button>
+    <!-- Add more segments if needed -->
+  </ion-segment>
+
+  <ion-item-group>
+    <ion-list>
+      <ion-item *ngFor="let music of musics" [routerLink]="['/music-detail', music.id]">
+        <ion-label>
+          <h2>{{ music.title }}</h2>
+          <p>{{ music.artist }} - {{ music.album }}</p>
+        </ion-label>
+      </ion-item>
+    </ion-list>
+  </ion-item-group>
 </ion-content>

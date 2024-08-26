@@ -12,12 +12,28 @@
       <ion-card-title>{{ music.title }}</ion-card-title>
     </ion-card-header>
     <ion-card-content>
-      <p><strong>Artist:</strong> {{ music.artist }}</p>
-      <p><strong>Album:</strong> {{ music.album }}</p>
-      <p><strong>Year:</strong> {{ music.year }}</p>
-      <p><strong>Genre:</strong> {{ music.genre }}</p>
-      <p><strong>Duration:</strong> {{ music.duration }}</p>
+      <ion-item>
+        <ion-label><strong>Artist:</strong></ion-label>
+        <ion-note>{{ music.artist }}</ion-note>
+      </ion-item>
+      <ion-item>
+        <ion-label><strong>Album:</strong></ion-label>
+        <ion-note>{{ music.album }}</ion-note>
+      </ion-item>
+      <ion-item>
+        <ion-label><strong>Year:</strong></ion-label>
+        <ion-note>{{ music.year }}</ion-note>
+      </ion-item>
+      <ion-item>
+        <ion-label><strong>Genre:</strong></ion-label>
+        <ion-chip>
+          <ion-label>{{ music.genre }}</ion-label>
+        </ion-chip>
+      </ion-item>
+      <ion-item>
+        <ion-label><strong>Duration:</strong></ion-label>
+        <ion-note>{{ music.duration }}</ion-note>
+      </ion-item>
     </ion-card-content>
   </ion-card>
 </ion-content>
-
